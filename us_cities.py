@@ -36,11 +36,13 @@ def us_cities_plot():
             data = data.loc[data["Sex"]=="Both Sexes"]
             data = data.loc[data["City type"]=="City proper"]
             data = data.reset_index()
+            data['Year'] = data['Year'].astype(str) # converts to string - else plotting as T infers it as nanoseconds from 01-01-1970
             chart = (
                 alt.Chart(data)
                 .mark_line()
                 .encode(
-                    x="Year:T",
+                    # x="Year:T",
+                    x=alt.X('year(Year):T'),
                     y="Value:Q",
                     color="City:N",
                 )
