@@ -45,8 +45,7 @@ def us_cities_plot():
                     color="City:N",
                 )
             )
-            st.write(chart)
-            st.line_chart(chart, use_container_width=True)
+            st.altair_chart(chart, use_container_width=True)
     except URLError as e:
         st.error(
             """
