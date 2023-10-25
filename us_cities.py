@@ -58,6 +58,7 @@ def us_cities_plot():
         )
 
 
-st.set_page_config(page_title="US Cities Population", page_icon="📊")
-st.markdown("# US Cities Population")
+st.set_page_config(page_title="US Cities Population Trends", page_icon="📊")
+st.markdown("# US Cities Population Trends")
 us_cities_plot()
+st.write('Copyright (c) 2023 Arnav Subbarayan Krishnan')
